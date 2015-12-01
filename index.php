@@ -50,7 +50,7 @@ echo '<a accesskey="r" href="javascript:window.location.href=window.location.hre
 <pre>
 <?php
 $database='chat';
-include '../mysql.php';
+include 'mysql.php';
 if (isset($_POST['name']) && isset($_POST['text']) && ($_POST['name']!="")) {
 //echo strip_tags($_POST['name']).' '.strip_tags($_POST['text']).'<br>';
 $q='insert into bigtable (name,text) values ("'.mysqli_real_escape_string($connection,$_POST['name']).'","'.mysqli_real_escape_string($connection,$_POST['text']).'")';
